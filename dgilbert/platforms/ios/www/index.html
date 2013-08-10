@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+ Denise M. Gilbert
+ AVF Term 1308
+ Project 1
+ August 9, 2013
+ index.html Page
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.theme-1.3.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+        <title>Denise's Demo App</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        
+        <!--  HOME PAGE -->
+        
+        <section id="home" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <img src="img/logo.png" alt="Logo" >
+            </header>
+            
+			<section data-role="content" data-theme="b">
+                <ul data-role="listview" data-filter="false" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" class="browseListDivider">APIs . . .</li>
+                        <li data-theme="b"><a href="#instagram"><img src="img/camera.png" alt="Instagram Icon">INSTAGRAM</a></li>
+                        <li data-theme="b"><a href="#currentEvents"><img src="img/audience.png" alt="Current Events Icon">Current Event Listings in Your Area</a></li>
+                <li data-role="list-divider">Native Features . . .</li>
+                        <li data-theme="b"><a href="#accelerometer"><img src="img/circleArrow.png" alt="Accelerometer Icon">Accelerometer</a></li>
+                        <li data-theme="b"><a href="#camera"><img src="img/camera.png" alt="Camera Icon">Camera</a></li>
+                        <li data-theme="b"><a href="#contacts"><img src="img/people.png" alt="Contacts Icon">Contacts</a></li>
+                        <li data-theme="b"><a href="#geolocation"><img src="img/earth.png" alt="Geolocation Icon">Geolocation</a></li>
+                        <li data-theme="b"><a href="#notification"><img src="img/exclamationPoint.png" alt="Notification Icon">Notification</a></li>
+                <li data-role="list-divider">RESEARCH TOPICS . . .</li>
+                        <li data-theme="b"><a href="#weekOne"><img src="img/one.png" alt="Number One Icon">WEEK ONE - Industry Research and Project Intent</a></li>
+                        <li data-theme="b"><a href="#weekTwo"><img src="img/two.png" alt="Number Two Icon">WEEK TWO - </a></li>
+                        <li data-theme="b"><a href="#weekThree"><img src="img/three.png" alt="Number Three Icon">WEEK THREE - </a></li>
+                        <li data-theme="b"><a href="#weekFour"><img src="img/four.png" alt="Number Four Icon">WEEK FOUR - </a></li>
+                </ul>
+            </section>
+			
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                <nav data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#about" data-icon="info">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            
+        </section>
+        
+        <!--  ABOUT PAGE -->
+        
+        <section id="about" data-role="page">
+            
+            <article data-role="panel" id="credits">
+				
+				<p><strong><em>Silver Icons:</em></strong></p>
+				<p>Mysitemyway Design Team</p>
+                        
+            </article>
+                
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <div class="logo"><a href=#home><img src="img/logo.png" alt="Logo"></a></div>
+                <p></p>
+            </header>
+                
+                <article data-role="content">
+                        <p>Denise M. Gilbert</p>
+                        <p>E-mail/iChat:  dmg763@fullsail.edu</p>
+                        <p><a href="https://github.com/dmg763/AVF.git">Main AVF GitHub Page</a></p>
+                        <p><a href="http://dmg763.github.io/AVF/index.html">IOS GitHub Page</a></p>
+                        <p><a href="http://dmg763.github.io/ASD/Project_2/index.html">Android GitHub Page</a></p>
+				
+                        <a href="#credits" data-role="button" data-inline="false">Credits</a>
+				
+                </article>
+                
+                <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                        <nav data-role="navbar" data-iconpos="top">
+                            <ul>
+                                <li><a href="#home" data-icon="home">Home</a></li>
+                                <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+                            </ul>
+                        </nav>
+                </footer>
+                
+        </section>
+        
+        <!--  WEEK 1 RESEARCH -->
+        
+        <section id="weekOne" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <img src="img/logo.png" alt="Logo" >
+                    </header>
+            
+            <article data-role="content">
+                <h1>WEEK ONE - Industry Research and Project Intent</h1>
+                <p>This week I researched APIs, native features, PhoneGap and the use of terminal.</p>
+                <p>My project intent is to create an app that will inform the user of local entertainment and events in their area.</p>
+                <p>I am hoping to combine the use of camera, geolocation, contacts, and notifications to create a nifty little app that will fulfill the requirements of my project intent.</p>
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                <nav data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#about" data-icon="info">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            
+        </section>
+        
+        <!--  WEEK 2 RESEARCH -->
+        
+        <section id="weekTwo" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <img src="img/logo.png" alt="Logo" >
+                    </header>
+            
+            <article data-role="content">
+                <h1>WEEK TWO - </h1>
+                <p></p>
+                <p></p>
+                <p></p>
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                <nav data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#about" data-icon="info">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            
+        </section>
+        
+        <!--  WEEK 3 RESEARCH -->
+        
+        <section id="weekThree" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <img src="img/logo.png" alt="Logo" >
+                    </header>
+            
+            <article data-role="content">
+                <h1>WEEK THREE - </h1>
+                <p></p>
+                <p></p>
+                <p></p>
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                <nav data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#about" data-icon="info">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            
+        </section>
+        
+        <!--  WEEK 4 RESEARCH -->
+        
+        <section id="weekFour" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <img src="img/logo.png" alt="Logo" >
+                    </header>
+            
+            <article data-role="content">
+                <h1>WEEK FOUR - </h1>
+                <p></p>
+                <p></p>
+                <p></p>
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                <nav data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#about" data-icon="info">About</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            
+        </section>
+        
+        
+        <script src="js/jquery-1-1.9.1.min.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
