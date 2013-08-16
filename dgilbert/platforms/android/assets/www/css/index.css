@@ -138,6 +138,10 @@ h2 {
 	font-weight: normal;
 }
 
+p {
+	font-size: 22px;
+}
+
 ul {
     list-style-type: none;
     margin: 2px;
@@ -173,4 +177,24 @@ ul {
 .liLabels {
 	color: white;
 	text-shadow: none;
+}
+
+#data-output {
+    text-align: center;
+}
+
+.instaPics img { 
+    border: 5px solid #581E59;
+    margin-bottom: 0px;
+    max-width: 100%;
+}
+
+.instaTitles { 
+    background-color: #581E59;
+    border: 5px solid #581E59;
+    color: silver;
+    font-size: 16pt;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    max-width: 100%;
 }
