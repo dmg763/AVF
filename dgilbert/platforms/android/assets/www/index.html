@@ -4,28 +4,46 @@
  AVF Term 1308
  index.html Page
 -->
+
 <html>
     <head>
         <meta charset="utf-8" />
+        
+        <!--  Mobile Viewport -->
+        
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+        
+        <!--  Stylesheets -->
         
         <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.theme-1.3.2.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         
+        <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+        <script src="js/libs/modernizr.custom.49087.js"></script>
+        
         <title>Denise's Demo App</title>
     </head>
+    
     <body>
+        
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
         
         
         <!--  HOME PAGE -->
         
-        <section id="home" data-role="page">
+        <section id="home" data-role="page" class="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <img src="img/logo.png" alt="Logo" >
+                <img src="img/myLogo.png" alt="Logo" >
             </header>
             
 			<section data-role="content" data-theme="b">
@@ -71,7 +89,7 @@
             </article>
                 
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
                 
@@ -102,15 +120,23 @@
         <section id="weekOne" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
             <article data-role="content">
+                
                 <h1>WEEK ONE - Industry Research and Project Intent</h1>
-                <p>This week I researched APIs, native features, PhoneGap and the use of terminal.</p>
-                <p>My project intent is to create an app that will inform the user of local entertainment and events in their area.</p>
-                <p>I am hoping to combine the use of camera, geolocation, contacts, and notifications to create a nifty little app that will fulfill the requirements of my project intent.</p>
+                
+                <dl>
+                    
+                    <dd>This week I researched APIs, native features, PhoneGap and the use of terminal.</dt>
+                    
+                    <dd>My project intent is to create an app that will inform the user of local entertainment and events in their area.</dd>
+                        
+                    <dd>I am hoping to combine the use of camera, geolocation, contacts, and notifications to create a nifty little app that will fulfill the requirements of my project intent.</dd>
+                </dl>
+                
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
@@ -129,7 +155,7 @@
         <section id="weekTwo" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
@@ -137,31 +163,36 @@
                 
                 <h1>WEEK TWO - DATA RESEARCH, PROJECT INTENT</h1>
                 
-                <p><strong>1.  Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</strong></p>
+                <dl>
                 
-                <p>I believe Twitter can be used the same as Facebook to create or login to different sites and applications.  This would grab the users information from their Twitter account such as name, address, etc.  This type of login is automatic once created unless the user logs out.  The same would be true for payments.  Twitter would associate a user with a specific payment service.  Most likely this would be PayPal as this service is widely accepted.</p>
+                <dt>1.  Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</dt>
                 
-                <p><strong>2.  Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</strong></p>
+                    <dd>I believe Twitter can be used the same as Facebook to create or login to different sites and applications.  This would grab the users information from their Twitter account such as name, address, etc.  This type of login is automatic once created unless the user logs out.  The same would be true for payments.  Twitter would associate a user with a specific payment service.  Most likely this would be PayPal as this service is widely accepted.</dd>
                 
-                <p>If I understand correctly, JSON-P is used for cross-domain requests.  This allows the user to access data outside of the current application or site.</p>
+                <dt>2.  Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</dt>
                 
-                <p><strong>3.  Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</strong></p>
+                    <dd>If I understand correctly, JSON-P is used for cross-domain requests.  This allows the user to access data outside of the current application or site.</dd>
                 
-                <p>Camera will pair well with many of the APIs.  Some of these might include advertising, blogging, entertainment, social networking.</p>
+                <dt>3.  Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</dd>
                 
-                <p>Contacts could pair well with databases, social networking, e-mail, file sharing, and games.</p>
+                    <dd>Camera will pair well with many of the APIs.  Some of these might include advertising, blogging, entertainment, social networking.</dd>
                 
-                <p>Notification could pair well with e-mail, social networking, entertainment, financial, job search, and messaging.</p>
+                    <dd>Contacts could pair well with databases, social networking, e-mail, file sharing, and games.</dd>
                 
-                <p><strong>4.  Please describe any design and functionality intentions you may have for your Demo app components this month.</strong></p>
+                    <dd>Notification could pair well with e-mail, social networking, entertainment, financial, job search, and messaging.</dd>
                 
-                <p>I was hoping to combine many of the native features with an entertainment API.  I was thinking the user could enter a zip code to find local entertainment.  This may include concerts, pumpkin patches, theatre, amusement parks, restaurants, etc.  The user could receive notifications, take pictures, and share with contacts.  This may change as the entertainment APIs I am finding so far, are not really what I was thinking about.  I will continue my search and see if I can find something more suitable.</p>
+                <dt>4.  Please describe any design and functionality intentions you may have for your Demo app components this month.</dt>
                 
-                <p><strong>5.  Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</strong></p>
+                    <dd>I was hoping to combine many of the native features with an entertainment API.  I was thinking the user could enter a zip code to find local entertainment.  This may include concerts, pumpkin patches, theatre, amusement parks, restaurants, etc.  The user could receive notifications, take pictures, and share with contacts.  This may change as the entertainment APIs I am finding so far, are not really what I was thinking about.  I will continue my search and see if I can find something more suitable.</dd>
                 
-                <p>One lesson learned that I do entirely too often is to “over think” what is required.  When I read the instructions, it sounds so simple, I believe I must be missing something.</p>
+                <dt>5.  Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</dt>
                 
-                <p>For the most part, I do start as early as possible; however, when I run into issues, I tend to feel frustrated and stuck.  If I cannot resolve the issue, I try to do more research and reach out to others.  It have learned it is in my best interest, while waiting for assistance, to work on something else instead of dwelling on that one specific issue.  I feel more productive and as if I have at least accomplished something.</p>
+                    <dd>One lesson learned that I do entirely too often is to “over think” what is required.  When I read the instructions, it sounds so simple, I believe I must be missing something.</dd>
+                
+                    <dd>For the most part, I do start as early as possible; however, when I run into issues, I tend to feel frustrated and stuck.  If I cannot resolve the issue, I try to do more research and reach out to others.  It have learned it is in my best interest, while waiting for assistance, to work on something else instead of dwelling on that one specific issue.  I feel more productive and as if I have at least accomplished something.</dd>
+                    
+                </dl>
+                
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
@@ -180,7 +211,7 @@
         <section id="weekThree" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
@@ -207,7 +238,7 @@
         <section id="weekFour" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
@@ -231,14 +262,14 @@
         
         <!--  INSTAGRAM -->
         
-        <section id="instagram" data-role="page">
+        <section id="instagram" data-role="page" class="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
-            <article data-role="content">
+            <article id="imagesContainer" data-role="content">
                 <ul id="data-output"></ul>
             </article>
             
@@ -258,7 +289,7 @@
         <section id="fourSquare" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             
@@ -283,7 +314,7 @@
         <section id="espn" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
                 <p></p>
             </header>
             

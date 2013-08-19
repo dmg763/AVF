@@ -1,7 +1,7 @@
 /* Denise M. Gilbert
  AVF Term 1308
  index.js Page*/
- 
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -54,7 +54,7 @@ $('#instagram').on('pageinit', function() {
 
         $.each(info.data, function(index, photo) {
 
-            var pic = "<li class='instaPics'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "' />" + "<h1 class='instaTitles'>" + photo.user.full_name + "</h1>" + "</li>";
+            var pic = "<li class='instaPics'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "' />" + "<h3 class='instaTitles'>" + photo.user.full_name + "<br>" + photo.likes.count + " Likes</h3>" + "</li>";
 
             $("#data-output").append(pic);
         });
@@ -107,7 +107,7 @@ $('#fourSquare').on('pageinit', function() {
 $('#espn').on('pageinit', function() {
 
     $('#espn').css({
-        backgroundColor: "#772B8C"
+        background: "#772B8C"
     });
 
     var espnOutput = function(info) {
@@ -134,3 +134,54 @@ $('#espn').on('pageinit', function() {
 
     });
 });
+
+// RESEARCH PAGES
+
+$('#weekOne').on('pageinit', function() {
+              
+    $('#weekOne').css({
+        background: "#FFFFFF"
+    });
+});
+
+$('#weekTwo').on('pageinit', function() {
+                 
+    $('#weekTwo').css({
+        background: "#FFFFFF"
+    });
+});
+
+$('#weekThree').on('pageinit', function() {
+                 
+    $('#weekThree').css({
+        background: "#FFFFFF"
+    });
+});
+
+$('#weekFour').on('pageinit', function() {
+                 
+    $('#weekFour').css({
+        background: "#FFFFFF"
+    });
+});
+
+// ORIENTATION CHANGE (PORTRAIT to LANDSCAPE)
+
+function updateOrientation()
+{
+    switch(window.orientation)
+    {
+        case -90:
+        case 90:
+            alert('landscape');
+            break;
+        default:
+            alert('portrait');
+            break;
+    }
+}
+
+document.addEventListener("orientationchange", updateOrientation);
+
+// Initial execution if needed
+updateOrientation();
