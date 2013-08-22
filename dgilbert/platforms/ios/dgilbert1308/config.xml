@@ -40,4 +40,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <access origin="*" />
+    <feature name="Capture">
+        <param name="ios-package" value="CDVCapture" />
+    </feature>
 </widget>

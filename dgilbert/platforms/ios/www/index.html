@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.theme-1.3.2.min.css" />
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         
         <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -40,39 +41,41 @@
         
         <!--  HOME PAGE -->
         
-        <section id="home" data-role="page" class="page">
+        <section id="home" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <img src="img/myLogo.png" alt="Logo" >
+                <img src="img/imThereLogo.png" alt="Logo" class="logoSpacing">
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
-			<section data-role="content" data-theme="b">
-                <ul data-role="listview" data-filter="false" data-divider-theme="b" data-inset="false">
+			<article data-role="content" data-theme="b">
+                
+                <ul data-role="listview" data-filter="false" data-inset="false">
                     <li data-role="list-divider" class="browseListDivider">APIs . . .</li>
-                        <li id="nav-instagram" data-theme="b"><a href="#instagram"><img src="img/camera.png" alt="Instagram Icon">INSTAGRAM</a></li>
-                        <li id="nav-fourSquare" data-theme="b"><a href="#fourSquare"><img src="img/audience.png" alt="FOURSQUARE Icon">FOURSQUARE</a></li>
-                        <li id="nav-espn" data-theme="b"><a href="#espn"><img src="img/football.png" alt="Football Icon">NFL INFO (PROVIDED BY ESPN)</a></li>
-                <li data-role="list-divider">Native Features . . .</li>
+                        <li id="nav-instagram" data-theme="b" data-inline="true"><a href="#instagram"><img src="img/camera.png" alt="Instagram Icon">INSTAGRAM</a></li>
+                        <li id="nav-fourSquare" data-theme="b" data-inline="true"><a href="#fourSquare"><img src="img/audience.png" alt="FOURSQUARE Icon">FOURSQUARE</a></li>
+                        <li id="nav-espn" data-theme="b" data-inline="true"><a href="#espn"><img src="img/football.png" alt="Football Icon">NFL INFO (PROVIDED BY ESPN)</a></li>
+                <li data-role="list-divider">NATIVE FEATURES . . .</li>
                         <li data-theme="b"><a href="#accelerometer"><img src="img/circleArrow.png" alt="Accelerometer Icon">Accelerometer</a></li>
-                        <li data-theme="b"><a href="#camera"><img src="img/camera.png" alt="Camera Icon">Camera</a></li>
+                        <li id="navCamera" data-theme="b"><a href="#cameraPage"><img src="img/camera.png" alt="Camera Icon">CAMERA</a></li>
                         <li data-theme="b"><a href="#contacts"><img src="img/people.png" alt="Contacts Icon">Contacts</a></li>
-                        <li data-theme="b"><a href="#geolocation"><img src="img/earth.png" alt="Geolocation Icon">Geolocation</a></li>
-                        <li data-theme="b"><a href="#notification"><img src="img/exclamationPoint.png" alt="Notification Icon">Notification</a></li>
+                        <li id="navGeolocation" data-theme="b"><a href="#geolocationPage"><img src="img/earth.png" alt="Geolocation Icon">GEOLOCATION / GOOGLE MAPS</a></li>
                 <li data-role="list-divider">RESEARCH TOPICS . . .</li>
-                        <li data-theme="b"><a href="#weekOne"><img src="img/one.png" alt="Number One Icon">WEEK ONE - Industry Research and Project Intent</a></li>
-                        <li data-theme="b"><a href="#weekTwo"><img src="img/two.png" alt="Number Two Icon">WEEK TWO - Data Research, Project Intent</a></li>
-                        <li data-theme="b"><a href="#weekThree"><img src="img/three.png" alt="Number Three Icon">WEEK THREE - </a></li>
-                        <li data-theme="b"><a href="#weekFour"><img src="img/four.png" alt="Number Four Icon">WEEK FOUR - </a></li>
+                        <li data-theme="b"><a href="#weekOne"><img src="img/one.png" alt="Number One Icon">WEEK ONE &#8211; Industry Research and Project Intent</a></li>
+                        <li data-theme="b"><a href="#weekTwo"><img src="img/two.png" alt="Number Two Icon">WEEK TWO &#8211; Data Research, Project Intent</a></li>
+                        <li data-theme="b"><a href="#weekThree"><img src="img/three.png" alt="Number Three Icon">WEEK THREE &#8211; Accessibility</a></li>
+                        <li data-theme="b"><a href="#weekFour"><img src="img/four.png" alt="Number Four Icon">WEEK FOUR &#8211; </a></li>
                 </ul>
-            </section>
+                
+            </article>
 			
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -89,8 +92,13 @@
             </article>
                 
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#about" class="ui-btn-active ui-state-persist" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
                 
                 <article data-role="content">
@@ -105,12 +113,7 @@
                 </article>
                 
                 <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                        <nav data-role="navbar" data-iconpos="top">
-                            <ul>
-                                <li><a href="#home" data-icon="home">Home</a></li>
-                                <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
-                            </ul>
-                        </nav>
+                        
                 </footer>
                 
         </section>
@@ -120,32 +123,34 @@
         <section id="weekOne" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
                 
-                <h1>WEEK ONE - Industry Research and Project Intent</h1>
+                <h1>WEEK ONE &#8211; Industry Research and Project Intent</h1>
                 
                 <dl>
                     
-                    <dd>This week I researched APIs, native features, PhoneGap and the use of terminal.</dt>
+                    <dt>1.  Describe Your Project Intentions for the Month</dt>
                     
-                    <dd>My project intent is to create an app that will inform the user of local entertainment and events in their area.</dd>
-                        
-                    <dd>I am hoping to combine the use of camera, geolocation, contacts, and notifications to create a nifty little app that will fulfill the requirements of my project intent.</dd>
+                        <dd>This week I researched APIs, native features, PhoneGap and the use of terminal.</dd>
+                    
+                        <dd>My project intent is to create an app that will inform the user of local entertainment and events in their area.</dd>
+                    
+                        <dd>I am hoping to combine the use of camera, geolocation, contacts, and notifications to create a nifty little app that will fulfill the requirements of my project intent.</dd>
                 </dl>
                 
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -155,13 +160,18 @@
         <section id="weekTwo" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
                 
-                <h1>WEEK TWO - DATA RESEARCH, PROJECT INTENT</h1>
+                <h1>WEEK TWO &#8211; DATA RESEARCH, PROJECT INTENT</h1>
                 
                 <dl>
                 
@@ -173,7 +183,7 @@
                 
                     <dd>If I understand correctly, JSON-P is used for cross-domain requests.  This allows the user to access data outside of the current application or site.</dd>
                 
-                <dt>3.  Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</dd>
+                <dt>3.  Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</dt>
                 
                     <dd>Camera will pair well with many of the APIs.  Some of these might include advertising, blogging, entertainment, social networking.</dd>
                 
@@ -196,12 +206,7 @@
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -211,24 +216,69 @@
         <section id="weekThree" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
-                <h1>WEEK THREE - </h1>
-                <p></p>
-                <p></p>
-                <p></p>
+                
+                <h1>WEEK THREE &#8211; ACCESSIBILITY</h1>
+                
+                <dl>
+                    
+                    <dt>1.  What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</dt>
+ 
+                        <dd>One way to provide better accessibility is to include “skip content” links.  This will allow users that need screen readers the ability to skip over repetitive content such as navigation menus.</dd>
+ 
+                        <dd>Another way is to make link names descriptive and non-repetitive.  This allows for easier searching of content when one is using a screen reader.</dd>
+ 
+                        <dd>One more way might be to use a “go” or “submit” link on all items in a list.  In this manner the user can view all of the options in the list to choose one instead of having to go right to the first item on the list.</dd>
+ 
+                    <dt>2.  Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</dt>
+ 
+                        <dd>The videos that I watched did not really describe issues with screen readers with the exception of cost.  However, according to a current survey listing from Minnesota Department of Natural Resources (2013) the following issues seem to be the most common.</dd>
+ 
+                        <dd>
+                            <ol>
+                                <li>The presence of inaccessible Flash content</li>
+                                <li>CAPTCHA - images presenting text used to verify that you are a human user</li>
+                                <li>Links or buttons that do not make sense</li>
+                                <li>Images with missing or improper descriptions (alt text)</li>
+                                <li>Screens or parts of screens that change unexpectedly</li>
+                                <li>Complex or difficult forms</li>
+                                <li>Lack of keyboard accessibility</li>
+                                <li>Missing or improper headings</li>
+                                <li>Too many links or navigation items</li>
+                                <li>Complex data tables</li>
+                                <li>Inaccessible or missing search functionality</li>
+                                <li>Lack of "skip to main content" or "skip navigation" links</li>
+                            </ol>
+                        </dd>
+ 
+                        <dd>Most of these issues can easily be resolved by staying aware and incorporating good design into my apps.  I will keep this list handy and make it a habit to be considerate of these concerns in all of my apps.</dd>
+ 
+                    <dt>3.  Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</dt>
+ 
+                        <dd>iOS-based devices include the following features:  VoiceOver, Voice Control, Mono Audio, Speak Auto Text, White on Black, and Zoom.</dd>
+ 
+                        <dd>Android(JellyBean) includes the following features:  Double Tapping, Touch Exploration, Accessibility Actions, TalkBack, and Support for Braille.</dd>
+ 
+                    <dt>4.  Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</dt>
+ 
+                        <dd>Mobile Accessibility is an app designed for the blind.  This app is two products in one and is designed for the Android.</dd>
+ 
+                        <dd>Siri is a speech recognition app.  This allows users to talk to control their device.  This app can understand one’s natural voice and will also ask questions if it does not understand what the user wants.  This works with VoiceOver on iOS devices.</dd>
+                    </dl>
+    
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -238,35 +288,40 @@
         <section id="weekFour" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
-                <h1>WEEK FOUR - </h1>
+                <h1>WEEK FOUR &#8211; </h1>
                 <p></p>
                 <p></p>
                 <p></p>
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
         
         <!--  INSTAGRAM -->
         
-        <section id="instagram" data-role="page" class="page">
+        <section id="instagram" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article id="imagesContainer" data-role="content">
@@ -274,12 +329,7 @@
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -289,22 +339,23 @@
         <section id="fourSquare" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
-                <p>********** THIS PAGE IS UNDER CONSTRUCTION **********</p>
+
                 <ul id="fourSquare-output"></ul>
+                
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
             </footer>
             
         </section>
@@ -314,21 +365,82 @@
         <section id="espn" data-role="page">
             
             <header data-role="header" data-position="fixed" data-theme="b">
-                <div class="logo"><a href="#home"><img src="img/myLogo.png" alt="Logo"></a></div>
-                <p></p>
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
             </header>
             
             <article data-role="content">
+                
                 <ul id="espn-output"></ul>
+                
             </article>
             
             <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
-                <nav data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#about" data-icon="info">About</a></li>
-                    </ul>
-                </nav>
+                
+            </footer>
+            
+        </section>
+        
+        <!--  CAMERA -->
+        
+        <section id="cameraPage" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            
+            <div id="camera">
+    
+            <article data-role="content">
+                
+                <button onclick="capturePhoto();">Capture Photo</button> <br>
+                <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+                <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+                
+                    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+                    <img style="display:none;" id="largeImage" src="" />
+                
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                
+            </footer>
+            
+        </section>
+        
+        <!--  GEOLOCATION -->
+        
+        <section id="geolocationPage" data-role="page">
+            
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <div><a href="#home"><img src="img/imThereLogo.png" alt="Logo" class="logoSpacing"></a></div>
+                    <nav data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                            <li><a href="#about" data-icon="info">About</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            
+            <article data-role="content">
+                <p id="geolocation">Finding geolocation...</p>
+                <div id="map">Map Placeholder</div>
+            </article>
+            
+            <footer data-role="footer" data-position="fixed" data-id="samefooter" data-theme="b">
+                
             </footer>
             
         </section>
@@ -337,8 +449,8 @@
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            </script>
+        <script type="text/javascript">app.initialize();</script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&sensor=false"></script>
+
     </body>
 </html>

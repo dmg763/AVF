@@ -34,31 +34,6 @@ body {
     }
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-dt {
-    font-size: 14pt;
-    font-weight: bold;
-    padding-left: 22px ;
-    text-indent: -22px ;
-    margin-bottom: 22px;
-    text-transform: none;
-}
-
-dd {
-    font-size: 14pt;
-    margin-left: 22px ;
-    margin-bottom: 22px;
-    text-transform: none;
-}
-
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -95,16 +70,10 @@ dd {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.ui-header {
-	background: #581E59;
-	border-color: #581E59;
-	padding-top: 10px;
-    text-align: center;
-}
-
 h1 {
-	color: #3B74BF;
-	font-size: x-large;
+	color: #044371;
+	font-size:24px;
+    font-weight: bold;
 	text-align: center;
 }
 
@@ -116,16 +85,50 @@ h2 {
 }
 
 h3 {
-    color: white;
+    color: #840D1C;
     font-size: 12pt;
     margin-left: 25px;
     padding: 0px;
     text-align: center;
 }
 
+h4 {
+    color: #581E59;
+    font-size:20px;
+    font-weight: bold;
+}
+
+h5 {
+    color: #000000;
+    font-size:20px;
+    font-weight: bold;
+}
+
 p {
 	font-size: 22px;
 }
+
+a {
+    color: blue;
+}
+
+dt {
+    font-size: 14pt;
+    font-weight: bold;
+    padding-left: 22px ;
+    text-indent: -22px ;
+    margin-bottom: 22px;
+    text-transform: none;
+}
+
+dd {
+    font-size: 14pt;
+    margin-left: 22px ;
+    margin-bottom: 22px;
+    text-transform: none;
+}
+
+/************************************* jQUERY MOBILE CSS *************************************/
 
 ul {
     list-style-type: none;
@@ -133,17 +136,29 @@ ul {
     padding: 2px;
 }
 
+.ui-header {
+	background: #044371;
+	border-color: #044371;
+	padding-top: 15px;
+    text-align: left;
+}
+
+.logoSpacing {
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
 .ui-btn {
-	background: #772B8C;
-	border-color: #581E59;
+	background: #036F8D;
+	border-color: #036F8D;
 	color: white;
 	text-shadow: none;
     cursor: pointer;
 }
 
 .ui-btn-active {
-	background: #581E59;
-	border-color: #581E59;
+	background: #044371;
+	border-color: #044371;
     color: white;
 }
 
@@ -156,6 +171,15 @@ ul {
 	background: transparent;
 }
 
+.ui-li-divider {
+    background: #C1B298;
+    border-color: #C1B298;
+    color: #044371;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+}
+
 .listviewImages {
 	padding-left: 10px;
 }
@@ -165,12 +189,12 @@ ul {
 	text-shadow: none;
 }
 
-#data-output {
-    text-align: center;
-}
+/************************************* INSTAGRAM *************************************/
+
+
 
 .instaPics img { 
-    border: 20px solid #581E59;
+    border: 3px solid #044371;
     margin-bottom: 0px;
     max-width: 100%;
 }
@@ -180,27 +204,34 @@ ul {
     float: left;
 }
 
-/* MEDIA QUERY - PORTRAIT ORIENTATION */
+/************************************* GOOGLE MAP *************************************/
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+/************************************* CAMERA *************************************/
+
+
+
+/************************************* MEDIA QUERY - PORTRAIT ORIENTATION *************************************/
 
 @media only screen and (min-width: 768px) {
 
     .instaPics {
-        margin-left: 20px;
-        padding-left: 4.5%;
-        padding-right: 4.5%;
-        width: 33.3%;
+        padding-left: 3.4%;
+        width: 29.3%;
     }
 }
 
-/* MEDIA QUERY - LANDSCAPE ORIENTATION */
+/************************************* MEDIA QUERY - LANDSCAPE ORIENTATION *************************************/
 
 @media only screen and (min-width: 1024px) {
     
     .instaPics {
-        margin-left: 20px;
-        padding-left: 4.5%;
-        padding-right: 4,5%;
-        width: 33.3%;
+        padding-left: 2.4%;
+        width: 22%;
     }
 }
 

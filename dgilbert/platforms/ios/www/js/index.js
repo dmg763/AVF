@@ -2,6 +2,14 @@
  AVF Term 1308
  index.js Page*/
 
+// GLOBAL VARIABLES
+
+var lat,
+    lng,
+    db,
+    dbresults,
+    itemindex;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,18 +42,157 @@ var app = {
     }
 };
 
-// HOME PAGE
-$('#home').on('pageinit', function() {
-    $('#home').css({
-        backgroundColor: "#581E59"
-    });
-});
+// DEVICE READY
+
+document.addEventListener('deviceready', onDeviceReady, false);
+
+// NATIVE FEATURE FUNCTIONS
+
+function onDeviceReady() {
+    $("#navGeolocation").on("click", accessGeolocation);
+};
+
+// CAMERA
+
+var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.FILE_URI });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      console.log('Failed because: ' + message);
+    }
+
+
+// GEOLOCATION
+
+function accessGeolocation () {
+    navigator.geolocation.getCurrentPosition(onSuccess, onGeoError);
+};
+
+    // onSuccess Geolocation
+
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + position.timestamp                    + '<br />';
+        
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        
+        var currentposition = new google.maps.LatLng(lat, lng);
+			
+			var mapoptions = {
+				zoom: 12,
+				center: currentposition,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			
+			var map = new google.maps.Map(document.getElementById("map"), mapoptions);
+			
+
+			var marker = new google.maps.Marker({
+					position: currentposition,
+					map: map
+			});
+    }
+
+// ERROR GEOLOCATION
+
+function onGeoError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+// ERROR CAMERA
+
+function onFail(message) {
+      alert('Failed because: ' + message);
+    }
 
 // INSTAGRAM
 $('#instagram').on('pageinit', function() {
 
     $('#instagram').css({
-        backgroundColor: "#772B8C"
+        backgroundColor: "#C1B298"
     });
 
     var screenOutput = function(info) {
@@ -86,13 +233,17 @@ $('#fourSquare').on('pageinit', function() {
 
         console.log(info);
 
-        $.each(info.response, function(index, respons) {
+        $.each(info.response.groups, function(index, group) {
 
-            var popularPlaces = "<li><h1>'" + respons + "'</h1></li>";
-            //var pic = "<li><img src='" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "' /><h4> + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>";
-            $("#fourSquare-output").append(popularPlaces);
+               
+            $.each(group.items, function(index, item) {
+                      
+            var popularPlaces = "<li><h4>" + item.venue.name + "<h5>" + '<a href=' + item.venue.url + '"/a>"' + "</h5></h4></li>";
+
+                $("#fourSquare-output").append(popularPlaces);
+                });
         });
-    };
+};
 
     $(function() {
 
